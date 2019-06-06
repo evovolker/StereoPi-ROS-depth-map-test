@@ -14,6 +14,20 @@ How to use:
 
 1. Put all files in home folder 
 
+1.1 Copy dt-blob.bin to /boot/ 
+    
+`sudo cp ~/dt-blob.bin /boot/`
+`reboot`
+
+Check if cameras recognized: 
+
+`vcgencmd get_camera`
+
+1.2 Install missing ROS dependencies: 
+
+`apt-get install ros-kinetic-stereo-image-proc ros-kinetic-image-view -y`
+
+
 2. Run Wezzoid's publisher:
 
 `python wezzoid_publish_nodes.py`
