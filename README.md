@@ -14,6 +14,26 @@ How to use:
 
 1. Put all files in home folder 
 
+1.1 Copy dt-blob.bin to /boot/ 
+    
+`sudo cp ~/dt-blob.bin /boot/`
+
+`reboot`
+
+Check if cameras recognized: 
+
+`vcgencmd get_camera`
+
+1.2 Install missing ROS dependencies: 
+
+`apt-get install ros-kinetic-stereo-image-proc ros-kinetic-image-view -y`
+
+1.3 To update YAML files with calib_results generated using https://github.com/realizator/stereopi-tutorial, run 
+
+`python yaml_input.py`
+
+in the calib_results folder and copy yaml files to home 
+
 2. Run Wezzoid's publisher:
 
 `python wezzoid_publish_nodes.py`
